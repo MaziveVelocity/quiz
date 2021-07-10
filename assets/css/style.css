@@ -1,0 +1,86 @@
+:root{
+    --background: #43176b;
+    --background-sec: #e7e0e7;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    background-color: #43176b;
+    font-family: 'Staatliches', cursive;
+    letter-spacing:  0.2rem;
+}
+
+/* Header Section */
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    color: var(--background-sec);
+}
+
+header div{
+    padding: 15px;
+}
+
+header h2{
+    text-align: center;
+    margin: auto;
+    padding: 15px;
+}
+
+header h2 a{
+    outline: none;
+    text-decoration: none;
+    color: var(--background-sec);
+}
+
+header h2 a:hover{
+    font-size: 1.2;
+}
+
+/* Progress section */
+#dot-wrapper{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: 30px auto 15px auto;
+}
+
+.progress-dot{
+    height: 15px;
+    width: 15px;
+    border: 3px solid var(--background-sec);
+    border-radius: 180px;
+}
+
+/* Main section */
+#question-wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50 auto;
+    height: 60%;
+    background-color: var(--background-sec);
+}
+
+#question-wrapper h1{
+    margin: 15 auto;
+    text-align: center;
+    width: 60%;
+    background-color: var(--background-sec);
+}
+
+#question-wrapper ul{
+    width: 30%;
+    color: var(--background);
+    background-color: var(--background-sec);
+}
+
+#question-wrapper ul li{
+    list-style: none;
+    margin: 20 auto;
+    color: var(--background);
+    background-color: var(--background-sec);
+}

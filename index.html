@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <title>Quiz</title>
+</head>
+<body>
+    <!--Header that stores the score board link-->
+    <header>
+        <div>
+            <h2><a href="/scoreboard.html">View High Scores</a></h2>
+        </div>
+        <div>
+            <h2>Time: <span id="timer">120</span></h2>
+        </div>
+    </header>
+    <!--progress section-->
+    <section id="dot-wrapper">
+        <div class="progress-dot" data-id="1"></div>
+        <div class="progress-dot" data-id="2"></div>
+        <div class="progress-dot" data-id="3"></div>
+        <div class="progress-dot" data-id="4"></div>
+        <div class="progress-dot" data-id="5"></div>
+        <div class="progress-dot" data-id="6"></div>
+        <div class="progress-dot" data-id="7"></div>
+        <div class="progress-dot" data-id="8"></div>
+        <div class="progress-dot" data-id="9"></div>
+        <div class="progress-dot" data-id="10"></div>
+    </section>
+    <!--Main body section that holds the questions - NOTE: should use script to inject each question-->
+    <main id="question-wrapper">
+        <h1>question</h1>
+        <ul id="question-choices">
+            <li class="question">answer 1</li>
+            <li class="question">answer 2</li>
+            <li class="question">answer 3</li>
+            <li class="question">answer 4</li>
+        </ul>
+        <section id="anwser-check">
+        </section>
+    </main>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
