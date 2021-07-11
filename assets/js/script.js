@@ -8,7 +8,7 @@ var score = 0;
 var questionValue = 5;
 
 
-// TODO: Set create array of questions
+// Set create array of questions
 var questions = [
     {
         q: "Question 1: What is NOT a data type?",
@@ -93,8 +93,6 @@ var questions = [
 
 ]
 
-// TODO: display scoreboard submission function that will display and save the data
-
 // check answer
 function answerCheck (i){
     questionsAreaEL.innerHTML = "";
@@ -174,7 +172,6 @@ function answerCheck (i){
         time = 0;
         displayScoreInput(score);
         submitScore();
-        // place submit scoreboard function
     }
 }
 
@@ -228,15 +225,32 @@ function displayScoreInput(score){
 }
 
 function submitScore(){
+    var jsonData = localStorage.getItem("localKey");
+    var oldLocalData = JSON.parse(jsonData);
+    console.log(oldLocalData);
+
+    if(oldLocalData != null){
+        console.log("local data is not null");
+        var localScore = oldLocalData.scoreValue;
+    }else{
+        console.log("local data is null");
+    }
+
     var scoreSubmitBtnEl = document.getElementById("score-btn");
     scoreSubmitBtnEl.addEventListener("click",function(){
-        var scoreInput = document.getElementById("score").value;
-        localStorage.setItem(scoreInput, score);
-        location.reload();
+        if(score > localScore || oldLocalData === null){
+            var scoreInput = document.getElementById("score").value;
+            var localData = {name: scoreInput, scoreValue: score};
+            localStorage.setItem("localKey", JSON.stringify(localData));
+            console.log("data stored");
+            location.reload();
+        }else{
+            location.reload();
+        }
     })
 }
 
-// TODO: main loop function
+// main loop function
 var mainLoop = function(){
     questionsAreaEL.innerHTML = '';
     dotContainerEl.setAttribute("style", "display: flex;")
@@ -247,12 +261,7 @@ var mainLoop = function(){
         if (time <= 0){
             timerEl.innerHTML = "0"
             clearInterval(startTimer);
-            // questionsAreaEL.innerHTML = "";
             console.log("timer has ended");
-            // display submission screen
-            // take in user input through textbox
-            // save user input when they hit submit
-            // take them back to original screen.
         }
     }, 1000);
 
