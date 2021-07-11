@@ -95,9 +95,6 @@ var questions = [
 
 // check answer
 function answerCheck (i){
-    questionsAreaEL.innerHTML = "";
-    // var dotIndex = i.toString();
-
     console.log(i+1);
 
     // create eventlistner
@@ -170,13 +167,13 @@ function answerCheck (i){
         dotContainerEl.innerHTML = "";
         timerEl.innerHTML = "0";
         time = 0;
-        displayScoreInput(score);
-        submitScore();
     }
 }
 
 // TODO: display question
 function displayQuestion (index){
+    questionsAreaEL.innerHTML = "";
+
     var questionEl = document.createElement("h1")
     var questionOptionsEl = document.createElement("ul");
     var choice1El = document.createElement("li");
@@ -203,6 +200,8 @@ function displayQuestion (index){
 }
 
 function displayScoreInput(score){
+    questionsAreaEL.innerHTML = "";
+
     var scoreTitleEl = document.createElement("h1");
     var inputLableEl = document.createElement("label");
     var textInputEl = document.createElement("input");
@@ -252,15 +251,21 @@ function submitScore(){
 
 // main loop function
 var mainLoop = function(){
-    questionsAreaEL.innerHTML = '';
+
     dotContainerEl.setAttribute("style", "display: flex;")
+    
     var startTimer = setInterval(function() {
+
+        console.log(time);
         var timeValue = time.toString();
         timerEl.innerHTML = timeValue;
         time--;
-        if (time <= 0){
+   
+        if (time < 0){
             timerEl.innerHTML = "0"
             clearInterval(startTimer);
+            displayScoreInput(score);
+            submitScore();
             console.log("timer has ended");
         }
     }, 1000);
