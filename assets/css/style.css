@@ -6,9 +6,44 @@
 * {
     padding: 0;
     margin: 0;
-    background-color: #43176b;
+    background-color: var(--background);
     font-family: 'Staatliches', cursive;
     letter-spacing:  0.2rem;
+}
+
+.main{
+    background-color: var(--background-sec);
+    margin: 15px;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button{
+    padding: 15px;
+}
+
+label{
+    font-size: 50px;
+    margin: 10px;
+    background-color: var(--background-sec);
+    color: var(--background);
+}
+
+input{
+    background-color: var(--background-sec);
+    color: var(--background);
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    height: 50px;
+    width: 200px;
 }
 
 /* Header Section */
@@ -30,18 +65,12 @@ header h2{
 }
 
 header h2 a{
-    outline: none;
-    text-decoration: none;
     color: var(--background-sec);
-}
-
-header h2 a:hover{
-    font-size: 1.2;
 }
 
 /* Progress section */
 #dot-wrapper{
-    display: flex;
+    display: none;
     justify-content: space-around;
     width: 50%;
     margin: 30px auto 15px auto;
@@ -55,32 +84,46 @@ header h2 a:hover{
 }
 
 /* Main section */
-#question-wrapper{
+main{
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     margin: 50 auto;
+    padding: 0 10%;
     height: 60%;
+    width: 60%;
+    border-radius: 15px;
     background-color: var(--background-sec);
 }
 
-#question-wrapper h1{
+main h1{
     margin: 15 auto;
     text-align: center;
     width: 60%;
-    background-color: var(--background-sec);
-}
-
-#question-wrapper ul{
-    width: 30%;
     color: var(--background);
     background-color: var(--background-sec);
 }
 
-#question-wrapper ul li{
-    list-style: none;
+main ul{
+    display: flex;
+    flex-direction: column;
+    color: var(--background);
+    background-color: var(--background-sec);
+}
+
+main ul li{
+    padding: 10px;
     margin: 20 auto;
-    color: var(--background);
-    background-color: var(--background-sec);
+    width: 300px;
+    text-align: center;
+    border-radius: 15px;
+    list-style: none;
+    cursor: pointer;
+    background-color: var(--background);
+    color: var(--background-sec);
+}
+
+main ul li:hover{ 
+    background-color: #772ac0;
 }

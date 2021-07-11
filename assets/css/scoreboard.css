@@ -1,0 +1,12 @@
+:root{
+    --background: #43176b;
+    --background-sec: #e7e0e7;
+}
+
+#scoreboard h2{
+    background-color: var(--background-sec);   
+}
+
+#scoreboard h2 span{
+    background-color: var(--background-sec);   
+}
