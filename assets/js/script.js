@@ -36,7 +36,7 @@ var questions = [
     },
     {
         q: "Question 4: A loop that never ends is called ______?",
-        a1: {k: 1, s: "Hwile loop"},
+        a1: {k: 1, s: "While loop"},
         a2: {k: 2, s: "Recursive loop"},
         a3: {k: 3, s: "For loop"},
         a4: {k: 4, s: "Infinite loop"},
