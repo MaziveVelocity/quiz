@@ -26,4 +26,4 @@ https://mazivevelocity.github.io/quiz/
 
 ## Snapshot
 
-[assets/page-images/screenshot.png]
+![Screenshot](assets/page-images/screenshot.png)
